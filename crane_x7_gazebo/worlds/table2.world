@@ -24,7 +24,7 @@
     -->
 
     <model name="unko1">
-  <pose>0.2 0 1.0 0 0 0</pose>     #(x,y,z,roll,pitch,yaw)
+  <pose>0.2 0 1.05 0 0 0</pose>     #(x,y,z,roll,pitch,yaw)
     <link name="link">
       <inertial>
         <mass>1.0</mass>          #質量
@@ -58,7 +58,7 @@
 
 
     <model name="unko2">
-  <pose>0.2 0 1.03 0 0 0</pose>
+  <pose>0.2 0 1.08 0 0 0</pose>
     <link name="link">
       <inertial>
         <mass>1.0</mass>
@@ -92,7 +92,7 @@
 
 
     <model name="unko3">
-  <pose>0.2 0 1.06 0 0 0</pose>
+  <pose>0.2 0 1.11 0 0 0</pose>
     <link name="link">
       <inertial>
         <mass>1.0</mass>
