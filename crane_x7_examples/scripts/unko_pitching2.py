@@ -39,8 +39,6 @@ class ArmJointTrajectoryExample(object):
             sys.exit(1)
 
     def go(self):
-        
-          
         position = math.radians(45.0)
         effort  = 1.0
         self.gripper_goal.command.position = position
@@ -167,7 +165,7 @@ class ArmJointTrajectoryExample(object):
         self._client.wait_for_result(timeout=rospy.Duration(100.0))
         print(goal)
 
-        #投げる3(終点)
+        #投げ終わり
         point = JointTrajectoryPoint()
         goal = FollowJointTrajectoryGoal()
         goal.trajectory.joint_names = ["crane_x7_shoulder_fixed_part_pan_joint", "crane_x7_shoulder_revolute_part_tilt_joint",
@@ -202,8 +200,6 @@ class ArmJointTrajectoryExample(object):
     def feedback(self,msg):
         print("feedback callback")
         print(msg)
-
-
 
 if __name__ == "__main__":
     rospy.init_node("arm_joint_trajectory_example")

@@ -30,6 +30,9 @@ def yaw_of(object_orientation):
 def main():
     global gazebo_model_states
 
+    TARGET_X = 0.20  #目標位置
+    TARGET_Y = 0.0
+    TARGET_Z = 0.1
     OBJECT_NAME = "wood_cube_5cm"   # 掴むオブジェクトの名前
     GRIPPER_OPEN = 1.2              # 掴む時のハンド開閉角度
     GRIPPER_CLOSE = 0.42            # 設置時のハンド開閉角度
@@ -116,9 +119,10 @@ def main():
             rospy.sleep(1.0)
             
             # 設置位置に移動する
-            place_position = random.choice(PLACE_POSITIONS) # 設置位置をランダムに選択する
-            target_pose.position.x = place_position.x
-            target_pose.position.y = place_position.y
+            #place_position = random.choice(PLACE_POSITIONS) # 設置位置をランダムに選択する
+            target_pose.position.x = TARGET_X
+            target_pose.position.y = TARGET_Y
+            target_pose.position.z = TARGET_Z
             q = quaternion_from_euler(-math.pi, 0.0, -math.pi/2.0)
             target_pose.orientation.x = q[0]
             target_pose.orientation.y = q[1]
