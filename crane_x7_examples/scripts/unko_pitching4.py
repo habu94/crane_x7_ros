@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-#実機用(掴む時のグリッパーの角度:10度)→ objectが柔らかい為
+#シミュレータ用(掴む時のグリッパーの角度:23度)
 #乱数を出して0.5より大きかったら左投げ、それ以外だったら右投げにするバージョン
 
 import rospy
@@ -74,11 +74,11 @@ class ArmJointTrajectoryExample(object):
         #掴む時 
         point = JointTrajectoryPoint()
         goal = FollowJointTrajectoryGoal()
-        goal.trajectory.joint_names = ["crane_x7_shoulder_fixed_part_pan_joint","crane_x7_shoulder_revolute_part_tilt_joint","crane_x7_upper_arm_revolute_part_twist_joint","crane_x7_upper_arm_revolute_part_rotate_joint","crane_x7_lower_arm_fixed_part_joint", "crane_x7_lower_arm_revolute_part_joint","crane_x7_wrist_joint"]
+        goal.trajectory.joint_names = ["crane_x7_shoulder_fixed_part_pan_joint","crane_x7_shoulder_revolute_part_tilt_joint","crane_x7_upper_arm_revolute_part_twist_joint","crane_x7_upper_arm_revolute_part_rotate_joint","crane_x7_lower_arm_fixed_part_joint","crane_x7_lower_arm_revolute_part_joint","crane_x7_wrist_joint"]
          
         joint_values = [0.1721327091256155, -0.3630645331662308, -0.1862058852524493, -2.3243098124547927, 0.130925888195077, -0.48587059161714485, -1.6908899687220424]
        
-        position = math.radians(10.0) #掴む時のグリッパーの角度(実機用)
+        position = math.radians(23.0)  #掴む時のグリッパーの角度(シミュレータ用)
         effort  = 1.0
         self.gripper_goal.command.position = position
         self.gripper_goal.command.max_effort = effort
@@ -117,6 +117,7 @@ class ArmJointTrajectoryExample(object):
         self._client.send_goal(goal)
         self._client.wait_for_result(timeout=rospy.Duration(100.0))
 
+
         #投げる2(中間点)
         point = JointTrajectoryPoint()
         goal = FollowJointTrajectoryGoal()
@@ -124,7 +125,7 @@ class ArmJointTrajectoryExample(object):
         
         joint_values = [2.15, 1.22, 0.08, -1.45, -1.95, 0.24, 0.00]
 
-        #乱数が0.5以上だったら左投げになるため、joint_valuesの0,2,4,6番目に-1を掛けて反転させる
+        #乱数が0.5より大きかったら左投げになるため、joint_valuesの0,2,4,6番目に-1を掛けて反転させる
         if mode > 0.5:
             for i in range(4):
                 joint_values[i*2] = joint_values[i*2] * (-1)
@@ -144,7 +145,7 @@ class ArmJointTrajectoryExample(object):
         
         joint_values = [2.59, 1.14, -1.57, -0.88, -1.15, -0.32, -0.08]
        
-        #乱数が0.5以上だったら左投げになるため、joint_valuesの0,2,4,6番目に-1を掛けて反転させる
+        #乱数が0.5より大きかったら左投げになるため、joint_valuesの0,2,4,6番目に-1を掛けて反転させる
         if mode > 0.5:
             for i in range(4):
                 joint_values[i*2] = joint_values[i*2] * (-1)

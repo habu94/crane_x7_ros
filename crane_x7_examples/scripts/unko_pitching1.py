@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 #実機用(掴む時のグリッパーの角度:10度)→ objectが柔らかい為
+#自分で右投げか左投げか決めるバージョン
 
 import rospy
 import time
@@ -41,13 +42,13 @@ class ArmJointTrajectoryExample(object):
     def go(self, mode):
 
         #どっち投げかを表示 
-        if mode > 0.5:
+        if mode == 1:
             pitching_mode = "left"
 
         else:
             pitching_mode = "right"
 
-        print ("pitcing_mode:{}".format(pitching_mode))
+        print ("pitching_mode:{}".format(pitching_mode))
                
         #掴む直前
         point = JointTrajectoryPoint()
@@ -103,8 +104,8 @@ class ArmJointTrajectoryExample(object):
         
         joint_values = [0.99, 1.42, 0.44, -1.25, -1.44, 0.67, 0.00]
         
-        #乱数が0.5より大きかったら左投げになるため、joint_valuesの0,2,4,6番目に-1を掛けて反転させる
-        if mode > 0.5:
+        #入力したものが1だったら左投げになるため、joint_valuesの0,2,4,6番目に-1を掛けて反転させる
+        if mode == 1:
             for i in range(4):
                 joint_values[i*2] = joint_values[i*2] * (-1)
                 
@@ -123,8 +124,8 @@ class ArmJointTrajectoryExample(object):
         
         joint_values = [2.15, 1.22, 0.08, -1.45, -1.95, 0.24, 0.00]
 
-        #乱数が0.5以上だったら左投げになるため、joint_valuesの0,2,4,6番目に-1を掛けて反転させる
-        if mode > 0.5:
+        #入力したものが1だったら左投げになるため、joint_valuesの0,2,4,6番目に-1を掛けて反転させる
+        if mode == 1:
             for i in range(4):
                 joint_values[i*2] = joint_values[i*2] * (-1)
 
@@ -143,8 +144,8 @@ class ArmJointTrajectoryExample(object):
         
         joint_values = [2.59, 1.14, -1.57, -0.88, -1.15, -0.32, -0.08]
        
-        #乱数が0.5以上だったら左投げになるため、joint_valuesの0,2,4,6番目に-1を掛けて反転させる
-        if mode > 0.5:
+        #入力したものが1だったら左投げになるため、joint_valuesの0,2,4,6番目に-1を掛けて反転させる
+        if mode == 1:
             for i in range(4):
                 joint_values[i*2] = joint_values[i*2] * (-1)
         
@@ -173,6 +174,14 @@ class ArmJointTrajectoryExample(object):
 if __name__ == "__main__":
     rospy.init_node("arm_joint_trajectory_example")
     arm_joint_trajectory_example = ArmJointTrajectoryExample()
-    mode = np.random.rand(1) #モードを乱数で決める
-    result = arm_joint_trajectory_example.go(mode)
-    print(result)
+
+    while 1:
+
+        mode = input("\n右投げにしたい場合は 0 , 左投げにしたい場合は 1 を入力してください。\nどちらで投げますか？:")
+
+        if mode == 0 or mode == 1:
+            break
+        else:
+            print("Error\n")
+
+    arm_joint_trajectory_example.go(mode)
