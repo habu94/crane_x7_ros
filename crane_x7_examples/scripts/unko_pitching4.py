@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-#シミュレータ用(掴む時のグリッパーの角度:23度)
+#シミュレータ用(掴む時のグリッパーの角度:23.5度)
 #乱数を出して0.5より大きかったら左投げ、それ以外だったら右投げにするバージョン
 
 import rospy
@@ -78,7 +78,7 @@ class ArmJointTrajectoryExample(object):
          
         joint_values = [0.1721327091256155, -0.3630645331662308, -0.1862058852524493, -2.3243098124547927, 0.130925888195077, -0.48587059161714485, -1.6908899687220424]
        
-        position = math.radians(23.0)  #掴む時のグリッパーの角度(シミュレータ用)
+        position = math.radians(23.5)  #掴む時のグリッパーの角度(シミュレータ用)
         effort  = 1.0
         self.gripper_goal.command.position = position
         self.gripper_goal.command.max_effort = effort
