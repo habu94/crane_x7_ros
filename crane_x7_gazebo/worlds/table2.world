@@ -29,7 +29,7 @@
     <link name="unko_link1">
       <pose>0.2 0 0 0 0 0</pose>
       <inertial>
-        <mass>1.0</mass>
+        <mass>0.03</mass>
         <inertia>
           <ixx>1e-4</ixx>
           <ixy>0.0</ixy>
@@ -71,7 +71,7 @@
     <link name="unko_link2">
 	  <pose>0.2 0 0.02 0 0 0</pose>
       <inertial>
-        <mass>1.0</mass>
+        <mass>0.03</mass>
         <inertia>
           <ixx>1e-4</ixx>
           <ixy>0.0</ixy>
@@ -111,7 +111,7 @@
     <link name="unko_link3">
 	  <pose>0.2 0 0.035 0 0 0</pose>
       <inertial>
-        <mass>1.0</mass>
+        <mass>0.03</mass>
         <inertia>
           <ixx>1e-4</ixx>
           <ixy>0.0</ixy>
@@ -182,7 +182,7 @@
    <pose>0.2 0 1.0 0 0 0</pose>    #(x,y,z,roll,pitch,yaw)
 	 <link name="link">
 	   <inertial>
-		 <mass>1.0</mass>          #質量
+		 <mass>0.03</mass>          #質量
 		 <inertia>                 #慣性モーメント
 		   <ixx>1e-4</ixx>
 		   <ixy>0.0</ixy>
@@ -215,7 +215,7 @@
    <pose>0.2 0 1.03 0 0 0</pose>
      <link name="link">
 	   <inertial>
-		 <mass>1.0</mass>
+		 <mass>0.03</mass>
 		 <inertia>
 		   <ixx>1e-4</ixx>
 		   <ixy>0.0</ixy>
@@ -248,7 +248,7 @@
    <pose>0.2 0 1.06 0 0 0</pose>
      <link name="link">
 	   <inertial>
-		 <mass>1.0</mass>
+		 <mass>0.03</mass>
 		 <inertia>
 		   <ixx>1e-4</ixx>
 		   <ixy>0.0</ixy>
