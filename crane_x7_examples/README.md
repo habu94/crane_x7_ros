@@ -7,6 +7,7 @@ CRANE-X7のためのパッケージ、 `crane_x7` で用いるサンプルをま
 以下のコマンドでブランチを移動します。
 
 ```sh
+cd catkin_ws/src/crane_x7_ros
 git checkout unko
 ```
 
