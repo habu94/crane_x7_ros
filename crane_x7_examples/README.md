@@ -94,7 +94,5 @@ rosrun crane_x7_examples unko_pitching2-2.py
 ## おまけ
 
 動作させると[こちら↓](https://twitter.com/robo_cit/status/1201399538541400064)のような動きになります  
-[![thumbnail](https://pbs.twimg.com/ext_tw_video_thumb/1201399538541400064/pu/img/IqA06LoI-t5msSaF.jpg)](https://twitter.com/robo_cit/status/1201399538541400064/video/1)
-
-
+[![thumbnail](unko.png)](https://twitter.com/robo_cit/status/1201399538541400064/video/1)
 
