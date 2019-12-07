@@ -76,6 +76,8 @@ rosrun crane_x7_examples unko_pitching1-2.py
 
 動作させると[こちら](https://t.co/Ol9FSAa7HN?amp=1)のような動きになります。
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/TcwhWNa3hJ4&feature)(https://www.youtube.com/watch?v=TcwhWNa3hJ4&feature=youtu.be)]
+
 ---
 ### unko_pitching2-2.pyの実行
 
