@@ -60,7 +60,7 @@ rosrun crane_x7_examples unko_pitching1-1.py
 rosrun crane_x7_examples unko_pitching2-1.py
 ```
 
-動作させると[こちら](URL)のような動きになります
+動作させると[こちら](URL)のような動きになります。
 
 ---
 
@@ -74,7 +74,7 @@ Gazebo起動後、次のコマンドで実行します。
 rosrun crane_x7_examples unko_pitching1-2.py
 ```
 
-動作させると[こちら↓](https://t.co/Ol9FSAa7HN?amp=1)のような動きになります  
+動作させると[こちら↓](https://t.co/Ol9FSAa7HN?amp=1)のような動きになります。  
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/TcwhWNa3hJ4/0.jpg)](http://www.youtube.com/watch?v=TcwhWNa3hJ4)
 
 ---
@@ -88,11 +88,12 @@ Gazebo起動後、次のコマンドで実行します。
 rosrun crane_x7_examples unko_pitching2-2.py
 ```
 
-動作させると[こちら↓](https://t.co/6eMmfampnu?amp=1)のような動きになります  
+動作させると[こちら↓](https://t.co/6eMmfampnu?amp=1)のような動きになります。  
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/mw6Cfv1ABo4/0.jpg)](http://www.youtube.com/watch?v=mw6Cfv1ABo4)
 
 ## おまけ
 
-動作させると[こちら↓](https://twitter.com/robo_cit/status/1201399538541400064)のような動きになります  
+あるグループと繋げると・・・？[動画はこちら↓](https://twitter.com/robo_cit/status/1201399538541400064)のような動きになります。  
 [![thumbnail](unko.png)](https://twitter.com/robo_cit/status/1201399538541400064/video/1)
 
+紙コップタワーのコードは[こちら](https://github.com/GakuKuwano/crane_x7_ros/tree/master)にあります。
