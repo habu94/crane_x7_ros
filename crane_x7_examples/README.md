@@ -15,7 +15,7 @@ git checkout unko
 
 実機で動作を確認する場合、
 CRANE-X7から20cm離れた位置に投げたいうんこを以下の写真のように設置します。
-![bringup](https://github.com/RyokoShiojima/crane_x7_ros/images/unko2.jpg "bringup")
+![unko2](https://github.com/RyokoShiojima/crane_x7_ros/tree/unko/images/unko2.jpg "unko2")
 
 制御信号ケーブルを接続した状態で次のコマンドを実行します。
 ```sh
