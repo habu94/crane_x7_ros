@@ -63,7 +63,7 @@ rosrun crane_x7_examples unko_pitching2-1.py
 動作させると[こちら](URL)のような動きになります。
 
 ---
-
+<!--
 ### unko_pitching1-2.pyの実行
 
 Gazebo上でうんこを右投げにするか左投げを選択して投げるコードです。
@@ -77,7 +77,7 @@ rosrun crane_x7_examples unko_pitching1-2.py
 動作させると[こちら↓](https://t.co/Ol9FSAa7HN?amp=1)のような動きになります。  
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/TcwhWNa3hJ4/0.jpg)](http://www.youtube.com/watch?v=TcwhWNa3hJ4)
 
----
+
 ### unko_pitching2-2.pyの実行
 
 Gazebo上でうんこを右投げにするか左投げをランダムで決めて投げるコードです。
@@ -90,7 +90,7 @@ rosrun crane_x7_examples unko_pitching2-2.py
 
 動作させると[こちら↓](https://t.co/6eMmfampnu?amp=1)のような動きになります。  
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/mw6Cfv1ABo4/0.jpg)](http://www.youtube.com/watch?v=mw6Cfv1ABo4)
-
+-->
 ## おまけ
 
 あるグループと繋げると・・・？[動画はこちら↓](https://twitter.com/robo_cit/status/1201399538541400064)のような動きになります。  
