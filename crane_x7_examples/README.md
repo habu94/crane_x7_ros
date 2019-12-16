@@ -18,11 +18,7 @@ git clone https://github.com/RyokoShiojima/crane_x7_ros.git
 rosdep install -r -y --from-paths --ignore-src crane_x7_ros
 ``` 
 
-# crane_x7_examples
-
-CRANE-X7のためのパッケージ、 `crane_x7` で用いるサンプルをまとめたパッケージです。
-
-### まずブランチを移動
+### ブランチを移動
 
 以下のコマンドでブランチを移動します。
 
