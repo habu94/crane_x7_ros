@@ -1,3 +1,23 @@
+# 動作環境
+
+以下の環境にて動作確認を行っています。
+
+ - ROS Melodic
+   - OS: Ubuntu 18.04.3 LTS
+   - ROS Distribution: Melodic Morenia 1.14.3
+   - Rviz 1.12.16
+   - Gazebo 9.0.0
+ 
+# インストール方法
+
+```sh
+cd ~/catkin_ws/src/
+rm -rf ./crane_x7_ros
+git clone https://github.com/RyokoShiojima/crane_x7_ros.git
+(cd ~/catkin_ws && catkin_make)
+rosdep install -r -y --from-paths --ignore-src crane_x7_ros
+``` 
+
 # crane_x7_examples
 
 CRANE-X7のためのパッケージ、 `crane_x7` で用いるサンプルをまとめたパッケージです。
